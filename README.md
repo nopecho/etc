@@ -1,2 +1,2 @@
-# 💡간단한 소스코드 분석
-*모양 tee만들기 =https://github.com/nopecho/code_analysis/blob/main/print_tree.py
+# 💡간단한 코딩 연습
+
