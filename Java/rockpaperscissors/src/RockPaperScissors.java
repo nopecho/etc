@@ -10,9 +10,9 @@ public class RockPaperScissors {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		List<String> rps = new ArrayList<>(Arrays.asList("°¡À§", "¹ÙÀ§","º¸"));
+		List<String> rps = new ArrayList<>(Arrays.asList("ê°€ìœ„", "ë°”ìœ„","ë³´"));
 		while(true) {
-			System.out.print("¾È³»¸é Áø´Ù °¡À§ ¹ÙÀ§ º¸! : ");
+			System.out.print("ì•ˆë‚´ë©´ ì§„ë‹¤ ê°€ìœ„ ë°”ìœ„ ë³´! : ");
 			Scanner input2 = new Scanner(System.in);
 			String user = input2.next();
 			
@@ -32,25 +32,25 @@ public class RockPaperScissors {
 
 
 	public static boolean checkWin(String user,String com) {
-		List<String> rps = new ArrayList<>(Arrays.asList("°¡À§", "¹ÙÀ§","º¸"));		
+		List<String> rps = new ArrayList<>(Arrays.asList("ê°€ìœ„", "ë°”ìœ„","ë³´"));		
 		HashMap<Integer,String> winner = new HashMap<Integer,String>();
-		winner.put(0, "Á³½À´Ï´Ù.");
-		winner.put(1, "ÀÌ°å½À´Ï´Ù.");
-		winner.put(2, "ºñ°å½À´Ï´Ù.");
+		winner.put(0, "ì¡ŒìŠµë‹ˆë‹¤.");
+		winner.put(1, "ì´ê²¼ìŠµë‹ˆë‹¤.");
+		winner.put(2, "ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 		int win;
 				
 		if (!rps.contains(user)) {
-			System.out.println("´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+			System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì„¸ìš”");
 			return false;
 		}
 		System.out.println("YOU = "+user+" vs "+com+" = COM");
-		if (user == com) {
+		if (user.equals(com)) {
 			win = 2;
-		}else if (user == rps.get(0) && com == rps.get(2) ) {
+		}else if (user.equals(rps.get(0)) && com.equals(rps.get(2)) ) {
 			win = 1;
-		}else if (user == rps.get(1) && com == rps.get(0)) {
+		}else if (user.equals(rps.get(1)) && com.equals(rps.get(0)) ) {
 			win = 1;
-		}else if (user == rps.get(2) && com == rps.get(1)) {
+		}else if (user.equals(rps.get(2)) && com.equals(rps.get(1)) ) {
 			win = 1;
 		}else {
 			win = 0;
@@ -63,7 +63,7 @@ public class RockPaperScissors {
 	@SuppressWarnings("resource")
 	public static boolean continueGame() {
 		while (true) {
-			System.out.print("°è¼ÓÇÏ·Á¸é 1¹ø, ³¡³»·Á¸é 2¹øÀ» ÀÔ·ÂÇÏ¼¼¿ä. : ");
+			System.out.print("ê³„ì†í•˜ë ¤ë©´ 1ë²ˆ, ëë‚´ë ¤ë©´ 2ë²ˆì„ ì…ë ¥í•˜ì„¸ìš”. : ");
 			Scanner input = new Scanner(System.in);
 			String i = input.next();
 			if (Integer.valueOf(i) == 1) {
@@ -71,7 +71,7 @@ public class RockPaperScissors {
 			}else if (Integer.valueOf(i) == 2 ) {
 				return false;
 			}else {
-				System.out.println("1¶Ç´Â 2¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("1ë˜ëŠ” 2ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		}
 	}
