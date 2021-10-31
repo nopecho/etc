@@ -3,8 +3,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class test {
-	static String[] check = {"Á³½À´Ï´Ù.","ÀÌ°å½À´Ï´Ù.","ºñ°å½À´Ï´Ù."};
-	static String[] win = {"°¡À§","¹ÙÀ§","º¸"};
+	static String[] check = {"ì¡ŒìŠµë‹ˆë‹¤.","ì´ê²¼ìŠµë‹ˆë‹¤.","ë¹„ê²¼ìŠµë‹ˆë‹¤."};
+	static String[] win = {"ê°€ìœ„","ë°”ìœ„","ë³´"};
 	static Scanner input = new Scanner(System.in);
 	static String srp = input.next();
 
@@ -26,7 +26,7 @@ public class test {
 		System.out.println("YOU "+srp+" vs ", +comList[0],"COM");
 		}
 		else {
-			System.out.println("´Ù½Ã");
+			System.out.println("ë‹¤ì‹œ");
 			return false;
 		}
 	}
