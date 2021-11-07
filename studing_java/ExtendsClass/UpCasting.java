@@ -1,9 +1,9 @@
 class Adventurer {
-	String name; // ÀÌ¸§
-	int hp; //Ã¼·Â
+	String name; // ì´ë¦„
+	int hp; //ì²´ë ¥
 	  
 	public void punch() {
-		System.out.printf("[%s]ÀÇ ÆİÄ¡!!\n", name);
+		System.out.printf("[%s]ì˜ í€ì¹˜!!\n", name);
 	}
 	public void info() {
 		System.out.println("["+name+"] HP: "+hp);
@@ -11,50 +11,50 @@ class Adventurer {
 }
 
 class Knight extends Adventurer {
-  int strength; // Èû
+  int strength; // í˜
 
   public void berserker() {
-    System.out.println("Ã¼·Â°ú °ø°İ·ÂÀÌ Áõ°¡ÇÕ´Ï´Ù."); 
+    System.out.println("ì²´ë ¥ê³¼ ê³µê²©ë ¥ì´ ì¦ê°€í•©ë‹ˆë‹¤."); 
   }
   @Override
   public void info() {
-	  System.out.println("["+name+"] HP: "+hp+" Èû: "+strength);
+	  System.out.println("["+name+"] HP: "+hp+" í˜: "+strength);
 	}
 }
 
 class Thief extends Adventurer {
-  int agility; // ¹ÎÃ¸
+  int agility; // ë¯¼ì²©
 
   public void sharpen() {
-    System.out.println("Å©¸®Æ¼ÄÃ È®·üÀÌ Áõ°¡ÇÕ´Ï´Ù.");
+    System.out.println("í¬ë¦¬í‹°ì»¬ í™•ë¥ ì´ ì¦ê°€í•©ë‹ˆë‹¤.");
   }
   @Override
   public void info() {
-	  System.out.println("["+name+"] HP: "+hp+" ¹ÎÃ¸: "+agility);
+	  System.out.println("["+name+"] HP: "+hp+" ë¯¼ì²©: "+agility);
 	}
 }
 public class UpCasting {
 	public static void main(String[] args) {
-		// ±â»ç °´Ã¼ »ı¼º ¹× ÃÊ±âÈ­
+		// ê¸°ì‚¬ ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
 		Knight knight = new Knight();
-		knight.name = "¾Æ¼­½º";
+		knight.name = "ì•„ì„œìŠ¤";
 		knight.hp = 180;
 		knight.strength = 50;
 		
-		// µµÀû °´Ã¼ »ı¼º ¹× ÃÊ±âÈ­
+		// ë„ì  ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
 		Thief thief = new Thief();
-		thief.name = "¹ß¸®¶ó";
+		thief.name = "ë°œë¦¬ë¼";
 		thief.hp = 120;
 		thief.agility = 40;
 		
-		// ¾÷ Ä³½ºÆÃ - ºÎ¸ğ Å¸ÀÔÀ¸·Î °´Ã¼¸¦ ÇØ¼®
+		// ì—… ìºìŠ¤íŒ… - ë¶€ëª¨ íƒ€ì…ìœ¼ë¡œ ê°ì²´ë¥¼ í•´ì„
 		Adventurer adv0 = knight;
 		Adventurer adv1 = thief;
 		
-		// ¸ğÇè°¡µéÀÇ ¹è¿­ »ı¼º
+		// ëª¨í—˜ê°€ë“¤ì˜ ë°°ì—´ ìƒì„±
 		Adventurer[] advs = { adv0, adv1 };
 		
-		// ¸ğµç ¸ğÇè°¡ÀÇ Á¤º¸ Ãâ·Â
+		// ëª¨ë“  ëª¨í—˜ê°€ì˜ ì •ë³´ ì¶œë ¥
 		for (int i = 0; i < advs.length; i++) {
 			advs[i].info();
 		}
