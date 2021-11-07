@@ -21,17 +21,17 @@ class SutdaDeck {
 			cards[i]=temp;
 		}
 	}
-	SutdaCard pick(int index) { //¿À¹ö·Îµù
+	SutdaCard pick(int index) { //ì˜¤ë²„ë¡œë”©
 		return cards[index];
 	}
-	SutdaCard pick() { //¿À¹ö·Îµù
+	SutdaCard pick() { //ì˜¤ë²„ë¡œë”©
 		return cards[(int)(Math.random()*CARD_NUM)];		
 	}
 }
 
 class SutdaCard {
-	int num;
-	boolean isKwang;
+	fianl int num;
+	final boolean isKwang;
 
 	SutdaCard() {
 		this(1, true);
@@ -40,7 +40,7 @@ class SutdaCard {
 		this.num = num;
 		this.isKwang = isKwang;
 	}
-	// info()´ë½Å ObjectÅ¬·¡½ºÀÇ toString()À» ¿À¹ö¶óÀÌµùÇß´Ù.
+	// info()ëŒ€ì‹  Objectí´ëž˜ìŠ¤ì˜ toString()ì„ ì˜¤ë²„ë¼ì´ë”©í–ˆë‹¤.
 
 	public String toString() {
 		return num + (isKwang ? "K" : "");
@@ -55,13 +55,13 @@ public class Quiz_1_2 {
 			System.out.print(deck.cards[i] + ",");			
 		}
 		System.out.println();
-		System.out.println("5¹ø Ä«µå >>"+deck.pick(5));
-		System.out.println("·£´ý Ä«µå >>"+deck.pick());
+		System.out.println("5ë²ˆ ì¹´ë“œ >>"+deck.pick(5));
+		System.out.println("ëžœë¤ ì¹´ë“œ >>"+deck.pick());
 		deck.shuffle();		
-		System.out.println("<<<Ä«µå ¼¯±â>>>");
-		System.out.println("Ä«µå ¼¯°í ³­ ÈÄ 5¹ø Ä«µå >>"+deck.pick(5));
+		System.out.println("<<<ì¹´ë“œ ì„žê¸°>>>");
+		System.out.println("ì¹´ë“œ ì„žê³  ë‚œ í›„ 5ë²ˆ ì¹´ë“œ >>"+deck.pick(5));
 	}
 }
-//[½ÇÇà°á°ú]
+//[ì‹¤í–‰ê²°ê³¼]
 //
 //1K,2,3K,4,5,6,7,8K,9,10,1,2,3,4,5,6,7,8,9,10,
